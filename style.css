@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+}
+#right-window,#left-window {
+    animation: window 1s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#house {
+    animation: top 1s ease-in-out alternate;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+#top-window {
+    animation: top 1s ease;
+}
+
+
+@keyframes window{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes house{
+    0%{
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(40deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes top{
+    20%,40%,80%,to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-5px);
+    }
+}
